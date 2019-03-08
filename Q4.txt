@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int input,n1,n2;
+	cin >> input;
+	n1 = input;
+	cin >> input;
+	n2 = input;
+	for (; input != 0;) {
+		if (n1 < input && n2 < input) {
+			if (n1 > n2) {
+				n2 = n1;
+				n1 = input;
+				cin >> input;
+			}
+			else {
+				n1 = n2;
+				n2 = input;
+				cin >> input;
+			}
+		}
+		else {
+			
+			cin >> input;
+		}
+	}
+	cout << n1 << endl;
+	cout << n2 << endl;
+}
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+	int input, n1, n2, tep;
+	cin >> input;
+	n1 = input;
+	cin >> input;
+	n2 = input;
+	if (n2 > n1) {
+		tep = n1;
+		n1 = n2;
+		n2 = tep;
+	}
+	cin >> input;
+	for (; input != 0;) {
+		if (input > n1) {
+			n2 = n1;
+			n1 = input;
+			cin >> input;
+		}
+		else if (input > n2) {
+			n2 = input;
+			cin >> input;
+		}
+		else
+			cin >> input;
+	}
+	cout << n1 << endl;
+	cout << n2 << endl;
+}
+
+#include <iostream>
+using namespace std;
+int main() {
+	int s1, s2, num;
+	cin >> num;
+	s1 = num;
+	s2 = num;
+	do {
+		cin >> num;
+		if (num = 0)
+			break;
+		if (num < s1) {
+			s2 = s1;
+			s1 = num;
+		}
+		else if (num < s2) {
+			s2 = num;
+		}
+	} while (1);
+	cout << s1 << endl;
+	cout << s2;
+}
