@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	const double PI = 3.141592654;
+	double d, v;
+	cin >> d >> v;
+	cout << fixed << setprecision(3)<<asin(9.8*d/v/v)*180.0 / PI /2 ;
+}
