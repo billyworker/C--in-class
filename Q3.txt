@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string n1;
+	string n2;
+	int n3;
+	int n4;
+	cin >> n1 >> n3;
+	n4 = n1.length();
+	n3 = n3+1;
+	n2 = n2.assign(n1, 0, n4-n3+1);
+	n1 = n1.assign(n1, n4-n3+1, n4);
+	cout << n1 + n2;
+}
