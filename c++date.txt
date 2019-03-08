@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int x,y,z,a = 0;
+	cout << "Input day mouth year: ";
+	cin >> z >> y >> x;
+	if ((x % 100 != 0 && x % 4) == 0 || (x % 100 == 0 && x % 400 == 0)) {
+		switch (y) {
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+			if (z == 31) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		case 2:
+			if (z == 29) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		case 4: case 6: case 9: case 11:
+			if (z == 30) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		}
+	}
+	else {
+		switch (y) {
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+			if (z == 31) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		case 2:
+			if (z == 28) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		case 4: case 6: case 9: case 11:
+			if (z == 30) {
+				cout << z << "-" << y << "-" << x << " is correct";
+			}
+			else {
+				cout << z << "-" << y << "-" << x << " is incorrect";
+			}
+			break;
+		}
+	}
+	
+	return 0;
+
+}
