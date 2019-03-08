@@ -1,0 +1,30 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	struct tm t1 = { 0 };
+
+	struct tm t2 = { 0 };
+
+	int year, month, day = 0;
+
+	double seconds;
+	
+	cin >> day >> month >> year;
+
+	t1.tm_year = year - 1900; 
+	t1.tm_mon = month; t1.tm_mday = day;//?在??2016,11,21
+	
+	t2.tm_year = year - 1900; t2.tm_mon = 1; t2.tm_mday = 1;//高考??2017,6,7
+
+	
+	seconds = difftime(mktime(&t1), mktime(&t2));//???构体?time_t,利用difftime,?算??差
+
+	
+	cout << seconds / 86400 +1<< endl;//最后?出??,因?一天有86400秒(60*60*24)
+	
+	system("pause");
+}
